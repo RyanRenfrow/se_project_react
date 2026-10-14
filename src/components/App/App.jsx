@@ -17,8 +17,8 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [weatherError, setWeatherError] = useState("");
   const weatherRequest = useRef(null);
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
+  const [itemName, setItemName] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
   const [weather, setWeather] = useState("");
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function App() {
     }
     weatherRequest.current
       .then((data) => {
-        if (isActive) setWeatherData({ ...data, city: locationName });
+        if (isActive) setWeatherData(data);
       })
       .catch((error) => {
         if (isActive) setWeatherError(error.message);
@@ -52,14 +52,14 @@ function App() {
     event.preventDefault();
     setItems([
       ...items,
-      { _id: Date.now(), name: name.trim(), link: image.trim(), weather },
+      { _id: Date.now(), name: itemName.trim(), link: imageUrl.trim(), weather },
     ]);
     handleCloseModal();
   }
 
   function handleOpenAddModal() {
-    setName("");
-    setImage("");
+    setItemName("");
+    setImageUrl("");
     setWeather("");
     setActiveModal("add");
   }
@@ -67,7 +67,10 @@ function App() {
   return (
     <div className="page">
       <div className="page__content">
-        <Header weatherData={weatherData} onAddClothes={handleOpenAddModal} />
+        <Header
+          location={weatherData?.city || locationName}
+          onAddClothes={handleOpenAddModal}
+        />
         <Main
           weatherData={weatherData}
           weatherError={weatherError}
@@ -83,26 +86,26 @@ function App() {
         isOpen={activeModal === "add"}
         onClose={handleCloseModal}
         onSubmit={handleAddItem}
-        isSubmitDisabled={!name.trim() || !image.trim() || !weather}
+        isSubmitDisabled={!itemName.trim() || !imageUrl.trim() || !weather}
       >
         <label className="modal__label">
           Name
           <input
             name="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
+            value={itemName}
+            onChange={(event) => setItemName(event.target.value)}
             placeholder="Name"
             required
             maxLength={40}
           />
         </label>
         <label className="modal__label">
-          Image
+          Image URL
           <input
             name="image"
             type="url"
-            value={image}
-            onChange={(event) => setImage(event.target.value)}
+            value={imageUrl}
+            onChange={(event) => setImageUrl(event.target.value)}
             placeholder="Image URL"
             required
           />

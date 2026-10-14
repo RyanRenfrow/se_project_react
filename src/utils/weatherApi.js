@@ -5,8 +5,8 @@ export function getWeatherCondition(temperature) {
 }
 
 export function filterWeatherData(data) {
-  if (!Number.isFinite(data.main?.temp) || !data.name) {
-    throw new Error("Weather response is missing the city or temperature.");
+  if (!Number.isFinite(data.main?.temp)) {
+    throw new Error("Weather response is missing the temperature.");
   }
   return {
     city: data.name,

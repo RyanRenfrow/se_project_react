@@ -4,7 +4,7 @@ import ItemCard from "../ItemCard/ItemCard";
 
 function Main({ items, onItemClick, weatherData, weatherError }) {
   const visibleItems = weatherData
-    ? items.filter((item) => item.weather.toLowerCase() === weatherData.type)
+    ? items.filter((item) => item.weather === weatherData.type)
     : items;
   return (
     <main>

@@ -1,7 +1,7 @@
 import "./Header.css";
 import logo from "../../images/Logo.png";
 import avatar from "../../images/Ellipse 18.png";
-function Header({ onAddClothes, weatherData }) {
+function Header({ onAddClothes, location }) {
   const currentDate = new Date().toLocaleString("en-US", {
     month: "long",
     day: "numeric",
@@ -10,8 +10,7 @@ function Header({ onAddClothes, weatherData }) {
     <header className="header">
       <img className="header__logo" src={logo} alt="WTWR" />
       <p className="header__date-and-location">
-        {currentDate}
-        {weatherData ? `, ${weatherData.city}` : ""}
+        {currentDate}, {location}
       </p>
       <button
         className="header__add-clothes-btn"

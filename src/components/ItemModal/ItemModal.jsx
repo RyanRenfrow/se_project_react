@@ -32,7 +32,7 @@ function ItemModal({ item, isOpen, onClose }) {
             />
             <div className="item-modal__details">
               <h2 id="item-title">{item.name}</h2>
-              <p>Weather: {item.weather.toLowerCase()}</p>
+              <p>Weather: {item.weather}</p>
             </div>
           </>
         )}
