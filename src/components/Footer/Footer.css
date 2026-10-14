@@ -1,0 +1,2 @@
+.footer { display: flex; justify-content: space-between; margin-top: auto; padding-top: 80px; font-size: 16px; font-weight: 700; }
+.footer p { margin: 0; }

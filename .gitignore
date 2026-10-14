@@ -1,2 +1,7 @@
 node_modules/
 dist/
+*.log
+*Learning-Guide*
+.env
+.env.*
+!.env.example
