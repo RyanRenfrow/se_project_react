@@ -7,9 +7,13 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 32px 40px 80px;
-  min-height: 822px;
+  min-height: max(822px, 100dvh);
   display: flex;
   flex-direction: column;
 }
 
-@media (max-width: 600px) { .page__content { padding: 20px 16px 40px; } }
+@media (max-width: 600px) {
+  .page__content {
+    padding: 20px 16px 40px;
+  }
+}

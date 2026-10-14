@@ -1,5 +1,30 @@
-.clothes { margin-top: 40px; }
-.clothes__title { margin: 0 0 34px; font-size: 20px; line-height: 24px; font-weight: 700; }
-.clothes__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; list-style: none; padding: 0; margin: 0; }
-@media (max-width: 1000px) { .clothes__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 400px) { .clothes__list { gap: 12px; } .clothes__title { font-size: 18px; } }
+.clothes {
+  margin-top: 40px;
+}
+.clothes__title {
+  margin: 0 0 34px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.clothes__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  .clothes__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .clothes__list {
+    gap: 12px;
+  }
+  .clothes__title {
+    font-size: 18px;
+  }
+}

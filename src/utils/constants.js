@@ -1,10 +1,3 @@
-import shirt from "../images/T-Shirt.png";
-import shorts from "../images/Shorts.png";
-import cap from "../images/hat.png";
-import sneakers from "../images/Shoe.png";
-export const clothingItems = [
-  { id: 1, name: "T-Shirt", image: shirt, weather: "hot" },
-  { id: 2, name: "Shorts", image: shorts, weather: "hot" },
-  { id: 3, name: "Cap", image: cap, weather: "hot" },
-  { id: 4, name: "Sneakers", image: sneakers, weather: "warm" },
-];
+export const coordinates = { latitude: "35.7796", longitude: "-78.6382" };
+export const locationName = "Raleigh, NC";
+export const apiKey = "0e26669e54030f2bd2c50642866f6dda";

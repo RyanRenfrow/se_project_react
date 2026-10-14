@@ -1,16 +1,17 @@
-# React + Vite
+# WTWR (What to Wear)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+ - Displays the weather and adjusts the recommended clothing depending on the temperature.
+ - When clicking on a card it pops up and displays what the selected clothing item is for. 
+ - I got the stylesheets connected and the apis working with each other. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Add a garment example
 
-## React Compiler
+<img src="./docs/images/add-garment.png" alt="New garment form with name, image URL, and weather category fields" width="300">
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Add clothing by entering a name and image URL, then selecting the weather category: hot, warm, or cold.
 
-## Expanding the ESLint configuration
+- [Project repository][def]
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[def]: https://github.com/RyanRenfrow/se_project_react
